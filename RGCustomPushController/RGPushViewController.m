@@ -55,16 +55,24 @@
     viewController.view.frame = self.view.bounds;
     viewController.view.backgroundColor = [UIColor grayColor];
     viewController.view.transform = CGAffineTransformMakeScale(.5, .5);
+    
     viewController.view.alpha = 0;
+    
     [self addChildViewController:viewController];
     [self.view addSubview:viewController.view];
-    [UIView animateWithDuration:.4
+    [UIView animateWithDuration:.6
                      animations:^{
         viewController.view.transform = CGAffineTransformIdentity;
+                         CGAffineTransform scaleTransform = CGAffineTransformMakeScale(.4, .4);
+                         CGAffineTransform translationTransform = CGAffineTransformMakeTranslation(-self.view.bounds.size.width, 0);
+                         CGAffineTransform scaleAndTranslate = CGAffineTransformConcat(scaleTransform,translationTransform);
+                         [self bottomView].transform = scaleAndTranslate;
+                         
         viewController.view.alpha = 1 ;
 
     } completion:^(BOOL finished) {
         [viewController didMoveToParentViewController:self];
+        [self bottomView].transform = CGAffineTransformIdentity;
     }];
 }
 
@@ -77,7 +85,10 @@
         [viewController willMoveToParentViewController:nil];
         [UIView animateWithDuration:.4
                          animations:^{
-                             viewController.view.transform = CGAffineTransformMakeScale(.4, .4);
+                             CGAffineTransform scaleTransform = CGAffineTransformMakeScale(.4, .4);
+                             CGAffineTransform translationTransform = CGAffineTransformMakeTranslation(-self.view.bounds.size.width, 0);
+                             CGAffineTransform scaleAndTranslate = CGAffineTransformConcat(scaleTransform,translationTransform);
+                             viewController.view.transform = scaleAndTranslate;
                              viewController.view.alpha = 0;
                          }
                          completion:^(BOOL finished) {
@@ -89,6 +100,12 @@
 }
 
 
+- (UIView  *)bottomView
+{
+    NSArray *allChildren = [self childViewControllers];
+    UIViewController *bottomViewController = allChildren.firstObject;
+    return bottomViewController.view;
+}
 
 
 
