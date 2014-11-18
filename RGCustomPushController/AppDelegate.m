@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RGPushViewController.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+    ViewController *firstTopVC = [[ViewController alloc]init];
+    RGPushViewController *rootVC = [[RGPushViewController alloc]initWithRootViewController:firstTopVC];
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

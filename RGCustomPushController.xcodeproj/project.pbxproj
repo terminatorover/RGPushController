@@ -14,6 +14,8 @@
 		A1AAD0E11A1AD3DA005E73F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1AAD0E01A1AD3DA005E73F1 /* Images.xcassets */; };
 		A1AAD0E41A1AD3DA005E73F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AAD0E21A1AD3DA005E73F1 /* LaunchScreen.xib */; };
 		A1AAD0F01A1AD3DA005E73F1 /* RGCustomPushControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AAD0EF1A1AD3DA005E73F1 /* RGCustomPushControllerTests.m */; };
+		A1AAD0FB1A1AD3F5005E73F1 /* RGPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AAD0FA1A1AD3F5005E73F1 /* RGPushViewController.m */; };
+		A1AAD0FE1A1AE056005E73F1 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AAD0FD1A1AE056005E73F1 /* NextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		A1AAD0E91A1AD3DA005E73F1 /* RGCustomPushControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RGCustomPushControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AAD0EE1A1AD3DA005E73F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1AAD0EF1A1AD3DA005E73F1 /* RGCustomPushControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RGCustomPushControllerTests.m; sourceTree = "<group>"; };
+		A1AAD0F91A1AD3F5005E73F1 /* RGPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGPushViewController.h; sourceTree = "<group>"; };
+		A1AAD0FA1A1AD3F5005E73F1 /* RGPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGPushViewController.m; sourceTree = "<group>"; };
+		A1AAD0FC1A1AE056005E73F1 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		A1AAD0FD1A1AE056005E73F1 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				A1AAD0D81A1AD3DA005E73F1 /* AppDelegate.m */,
 				A1AAD0DA1A1AD3DA005E73F1 /* ViewController.h */,
 				A1AAD0DB1A1AD3DA005E73F1 /* ViewController.m */,
+				A1AAD0FC1A1AE056005E73F1 /* NextViewController.h */,
+				A1AAD0FD1A1AE056005E73F1 /* NextViewController.m */,
+				A1AAD0F91A1AD3F5005E73F1 /* RGPushViewController.h */,
+				A1AAD0FA1A1AD3F5005E73F1 /* RGPushViewController.m */,
 				A1AAD0DD1A1AD3DA005E73F1 /* Main.storyboard */,
 				A1AAD0E01A1AD3DA005E73F1 /* Images.xcassets */,
 				A1AAD0E21A1AD3DA005E73F1 /* LaunchScreen.xib */,
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AAD0FE1A1AE056005E73F1 /* NextViewController.m in Sources */,
 				A1AAD0DC1A1AD3DA005E73F1 /* ViewController.m in Sources */,
+				A1AAD0FB1A1AD3F5005E73F1 /* RGPushViewController.m in Sources */,
 				A1AAD0D91A1AD3DA005E73F1 /* AppDelegate.m in Sources */,
 				A1AAD0D61A1AD3DA005E73F1 /* main.m in Sources */,
 			);
